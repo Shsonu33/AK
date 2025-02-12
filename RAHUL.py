@@ -15,12 +15,12 @@ from datetime import datetime, timedelta, timezone
 MONGO_URI = 'mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net'
 client = MongoClient(MONGO_URI)
 db = client['Kamisama']
-users_collection = db['SHANKU']
+users_collection = db['SHACBNBKKU']
 settings_collection = db['settings0']  # A new collection to store global settings
 redeem_codes_collection = db['redeem_codes0']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7898311586:AAGBiCfnO-YPIp8SVjJirmO744qC6NnRATs'
+TELEGRAM_BOT_TOKEN = '7313487631:AAGpOo4UcgVp01I49LvH40iAuP6et1_1hKw'
 ADMIN_USER_ID = 6005957043  # Replace with your admin user ID
 
 async def help_command(update: Update, context: CallbackContext):

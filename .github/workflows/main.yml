@@ -5,20 +5,20 @@ on: push: branches: - main workflow_dispatch:
 jobs: run_script: runs-on: ubuntu-latest
 
 steps:
-- name: Checkout repository
-  uses: actions/checkout@v3
+  - name: Checkout repository
+    uses: actions/checkout@v3
 
-- name: Setup Python
-  uses: actions/setup-python@v4
-  with:
-    python-version: '3.x'
+  - name: Setup Python
+    uses: actions/setup-python@v4
+    with:
+      python-version: '3.x'
 
-- name: Install Dependencies and Run Script
-  run: |
-    pip install --upgrade pip
-    pip install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
-    chmod +x *
-    pip install pytz
-    pip install pymongo python-telegram-bot pyTelegramBotAPI certifi
-    python3 m.py
+  - name: Install Dependencies and Run Script
+    run: |
+      pip install --upgrade pip
+      pip install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
+      chmod +x *
+      pip install pytz
+      pip install pymongo python-telegram-bot pyTelegramBotAPI certifi
+      python3 m.py
 

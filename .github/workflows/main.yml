@@ -2,7 +2,7 @@ name: Run Python Script on GitHub Actions
 
 on: push: branches: - main  # Jab bhi main branch par push ho, yeh workflow chalega workflow_dispatch:  # Manually bhi run kar sakte hain
 
-jobs: run-script: runs-on: ubuntu-latest  # GitHub ka Ubuntu runner use hoga
+jobs: run_script: runs-on: ubuntu-latest  # GitHub ka Ubuntu runner use hoga
 
 steps:
 - name: Checkout repository
@@ -15,6 +15,7 @@ steps:
 
 - name: Install Dependencies and Run Script
   run: |
+    pip install --upgrade pip
     pip install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
     chmod +x *
     pip install pytz

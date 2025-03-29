@@ -1,6 +1,6 @@
 name: Run Python Script on GitHub Actions
 
-on: push: branches: - main  # Jab bhi main branch par push ho, yeh workflow chalega workflow_dispatch:  # Manually bhi run kar sakte hain
+on: push: branches: - main  # Jab bhi main branch par push ho, yeh workflow chalega workflow_dispatch: {}
 
 jobs: run_script: runs-on: ubuntu-latest  # GitHub ka Ubuntu runner use hoga
 
